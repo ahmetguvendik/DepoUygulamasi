@@ -8,7 +8,7 @@ namespace IT_Depo
 
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-Q4VJJBK;Initial Catalog=ITDepoDb;Integrated Security=SSPI");
+        SqlConnection connection = new SqlConnection("");
         public Form1()
         {
             InitializeComponent();
