@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "30/1x7u8ZUf/Br+su2M40+NWo8WaGH8W8imrZ/Aj3giXSaCHO/NBvlOypaFWQl36JYoe2/m7CDEe2RDUpSKLEg==",
+  "dgSpecHash": "JbiMmNY7ADiOW7kqur/RBvgPNAY1LWGw+C170cS+qw8PBLoTIC8KePwIiHbkhQzwCYdiV/+yTQAgcokO41YYSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmet\\source\\repos\\IT_Depo\\IT_Depo\\IT_Depo.csproj",
+  "projectFilePath": "C:\\Users\\ahmet\\OneDrive\\Masaüstü\\DepoUygulamasi-main\\IT_Depo\\IT_Depo\\IT_Depo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
