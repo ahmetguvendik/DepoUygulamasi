@@ -13,24 +13,24 @@ namespace IT_Depo
 {
     public partial class Form2 : Form
     {
-        SqlConnection connection = new SqlConnection("");
+        SqlConnection connection = new SqlConnection("Server=DESKTOP-Q4VJJBK;Database=ITDepoDb;Trusted_Connection=True;");
         public Form2()
         {
             InitializeComponent();
         }
-        void getData()
+        async Task getDataAsync()
         {
             try
             {
 
                 string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Category.category_name,Product.verildimi from Product INNER JOIN Category on Product.kategori_id = Category.id");
-                connection.Open();
+                await connection.OpenAsync();
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns[0].Visible = false;
-                connection.Close();
+                await connection.CloseAsync();
                 // SqlDataReader reader = cmd.ExecuteReader();
             }
             catch (Exception ex)
@@ -39,13 +39,13 @@ namespace IT_Depo
             }
         }
 
-        void getCategory()
+        async void getCategory()
         {
 
             try
             {
                 string sql = string.Format("Select id,category_name from Category");
-                connection.Open();
+                await connection.OpenAsync();
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataSet = new DataSet();
@@ -53,7 +53,7 @@ namespace IT_Depo
                 comboBox1.DataSource = dataSet.Tables[0];
                 comboBox1.ValueMember = "id";
                 comboBox1.DisplayMember = "category_name";
-                connection.Close();
+                await connection.CloseAsync();
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace IT_Depo
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            getData();
+            getDataAsync();
             getCategory();
         }
 
@@ -77,13 +77,13 @@ namespace IT_Depo
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 string sql = string.Format(@"INSERT INTO Product (product_name, seri_no,info,kategori_id,verildimi) VALUES (@product_name, @seri_no, @info,@kategori_id,@verildimi)");
                 SqlCommand cmd = new SqlCommand(sql, connection);
-                connection.Open();
+                await connection.OpenAsync();
                 //foreach (var item in listBox1.Items)
                 //{
                 //    ints.Add(int.Parse(item.ToString()));
@@ -94,8 +94,8 @@ namespace IT_Depo
                 cmd.Parameters.AddWithValue("@kategori_id", comboBox1.SelectedValue);
                 cmd.Parameters.AddWithValue("@verildimi", false);
                 cmd.ExecuteNonQuery();
-                connection.Close();
-                getData();
+                await connection.CloseAsync();
+                getDataAsync();
             }
             catch (Exception ex)
             {
@@ -103,13 +103,13 @@ namespace IT_Depo
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 string sql = string.Format("UPDATE Product SET product_name=@product_name,seri_no=@seri_no,info=@info,kategori_id=@kategori_id WHERE id = '" + dataGridView1.CurrentRow.Cells["id"].Value.ToString() + "'  ");
                 SqlCommand cmd = new SqlCommand(sql, connection);
-                connection.Open();
+                await connection.OpenAsync();
                 //foreach (var item in listBox1.Items)
                 //{
                 //    ints.Add(int.Parse(item.ToString()));
@@ -119,8 +119,8 @@ namespace IT_Depo
                 cmd.Parameters.AddWithValue("@info", textBox3.Text);
                 cmd.Parameters.AddWithValue("@kategori_id", comboBox1.SelectedValue);
                 cmd.ExecuteNonQuery();
-                connection.Close();
-                getData();
+                await connection.CloseAsync();
+                getDataAsync();
             }
             catch (Exception ex)
             {
@@ -128,16 +128,16 @@ namespace IT_Depo
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
             try
             {
                 string sql = string.Format("DELETE FROM Product WHERE id = '" + dataGridView1.CurrentRow.Cells["id"].Value.ToString() + "' ");
                 SqlCommand cmd = new SqlCommand(sql, connection);
-                connection.Open();
+                await connection.OpenAsync();
                 cmd.ExecuteNonQuery();
-                connection.Close();
-                getData();
+                await connection.CloseAsync();
+                getDataAsync();
             }
             catch (Exception ex)
             {
@@ -145,7 +145,10 @@ namespace IT_Depo
             }
         }
 
-
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
     }
 }

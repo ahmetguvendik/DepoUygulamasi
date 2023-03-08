@@ -8,31 +8,31 @@ namespace IT_Depo
 
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("");
+        SqlConnection connection = new SqlConnection("Server=DESKTOP-Q4VJJBK;Database=ITDepoDb;Trusted_Connection=True;");
         public Form1()
         {
             InitializeComponent();
         }
 
-        void getData()
-        {
-            try
-            {
-                string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Category.category_name from Product INNER JOIN Category on Product.kategori_id = Category.id");
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView2.DataSource = dt;
-                dataGridView2.Columns[0].Visible = false;
-                connection.Close();
-                // SqlDataReader reader = cmd.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        //void getData()
+        //{
+        //    try
+        //    {
+        //        string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Category.category_name from Product INNER JOIN Category on Product.kategori_id = Category.id");
+        //        connection.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+        //        DataTable dt = new DataTable();
+        //        adapter.Fill(dt);
+        //        dataGridView2.DataSource = dt;
+        //        dataGridView2.Columns[0].Visible = false;
+        //        connection.Close();
+        //        // SqlDataReader reader = cmd.ExecuteReader();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
 
         void getListBoxData()
         {
@@ -85,15 +85,7 @@ namespace IT_Depo
         {
             try
             {
-                //SqlConnection connection = new SqlConnection("Data Source=DESKTOP-Q4VJJBK;Initial Catalog=ITDepoDb;Integrated Security=SSPI");
-                //string sql = string.Format("Select * from Category");
-                //connection.Open();
-                //SqlCommand command = new SqlCommand(sql, connection);
-                //SqlDataReader reader = command.ExecuteReader();
-                //while(reader.Read())
-                //{
-                //    comboBox1.Items.Add(reader["category_name"]);
-                //}
+               
 
                 string sql = string.Format("Select id,category_name from Category");
                 connection.Open();
@@ -118,11 +110,12 @@ namespace IT_Depo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            getData();
+            //getData();
             // getListBoxData();
             getAllData();
             getCategory();
             this.dateTimePicker1.Value = DateTime.Now;
+           
 
         }
 
@@ -145,7 +138,7 @@ namespace IT_Depo
                 cmd.Parameters.AddWithValue("@info", textBox3.Text);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-                getData();
+                //getData();
                 getListBoxData();
                 getAllData();
             }
@@ -163,7 +156,7 @@ namespace IT_Depo
             {
                 string sql = string.Format("UPDATE Person SET product_id=@product_id,start_time=@start_time,person_info=@person_info,seri_no=@seri_no,info=@info WHERE id = '" + dataGridView1.CurrentRow.Cells["id"].Value.ToString() + "'  ");
                 SqlCommand cmd = new SqlCommand(sql, connection);
-                connection.Open();
+                 connection.Open();
                 //foreach (var item in listBox1.Items)
                 //{
                 //    ints.Add(int.Parse(item.ToString()));
@@ -175,7 +168,7 @@ namespace IT_Depo
                 cmd.Parameters.AddWithValue("@info", textBox3.Text);
                 cmd.ExecuteNonQuery();
                 connection.Close();
-                getData();
+              //  getData();
                 getListBoxData();
                 getAllData();
             }
@@ -203,7 +196,7 @@ namespace IT_Depo
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 connection.Close();
-                getData();
+              //  getData();
                 getListBoxData();
                 getAllData();
             }
@@ -222,11 +215,11 @@ namespace IT_Depo
         {
 
             StringFormat format = new StringFormat();
-            Image ydaLogo = Image.FromFile("C:\\Users\\ahmet\\OneDrive\\Masaüstü\\DepoUygulamasi-main\\IT_Depo\\IT_Depo\\wwwroot\\yda logo.jpg");
+            Image ydaLogo = Image.FromFile("C:\\Users\\ahmet\\OneDrive\\Masaüstü\\DepoUygulamasi-main\\IT_Depo\\IT_Depo\\yda-logo.ico");
             format.Alignment = StringAlignment.Center;
             e.Graphics.DrawImage(ydaLogo, 100, 100, 200, 100);
             e.Graphics.DrawString("TESLÝM TUTANAÐI", title, brush, 300, 300);
-            e.Graphics.DrawString(listBox1.Text + " Modelli ve Seri Numarasý " + textBox1.Text + " Olan cihaz " + dataGridView1.CurrentRow.Cells[2].Value.ToString() + Environment.NewLine + "Tarihinde " + textBox2.Text + " tarafýndan teslim alýnmýþtýr.", title, brush, 75, 350);
+            e.Graphics.DrawString(listBox1.Text + " Modelli ve Seri Numarasý " + textBox1.Text + " Olan cihaz " + DateOnly.FromDateTime(dateTimePicker1.Value) + Environment.NewLine + "Tarihinde " + textBox2.Text + " tarafýndan teslim alýnmýþtýr.", title, brush, 75, 350);
             e.Graphics.DrawString("Teslim Alan", title, brush, 100, 500);
             e.Graphics.DrawString("Teslim Eden", title, brush, 600, 500);
         }
@@ -300,6 +293,23 @@ namespace IT_Depo
             }
 
 
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -41,6 +41,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,27 +52,27 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 159);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 341);
+            this.textBox1.Location = new System.Drawing.Point(68, 260);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 23);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 341);
+            this.textBox2.Location = new System.Drawing.Point(226, 260);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(153, 23);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(396, 341);
+            this.textBox3.Location = new System.Drawing.Point(385, 260);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(139, 23);
             this.textBox3.TabIndex = 3;
@@ -79,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 323);
+            this.label1.Location = new System.Drawing.Point(117, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 4;
@@ -88,7 +89,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 323);
+            this.label2.Location = new System.Drawing.Point(272, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 5;
@@ -97,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(454, 323);
+            this.label3.Location = new System.Drawing.Point(443, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 15);
             this.label3.TabIndex = 6;
@@ -105,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(283, 403);
+            this.button1.Location = new System.Drawing.Point(272, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(364, 403);
+            this.button2.Location = new System.Drawing.Point(353, 322);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 23);
             this.button2.TabIndex = 9;
@@ -134,7 +135,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(442, 403);
+            this.button3.Location = new System.Drawing.Point(431, 322);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -145,7 +146,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(541, 341);
+            this.comboBox1.Location = new System.Drawing.Point(530, 260);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(148, 23);
             this.comboBox1.TabIndex = 11;
@@ -153,17 +154,28 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(578, 323);
+            this.label5.Location = new System.Drawing.Point(567, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Kategori";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(642, 398);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(113, 23);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Cihaz Detay";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
@@ -201,5 +213,6 @@
         private Button button3;
         private ComboBox comboBox1;
         private Label label5;
+        private Button button4;
     }
 }

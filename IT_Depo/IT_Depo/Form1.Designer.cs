@@ -37,10 +37,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,8 +48,9 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
@@ -70,7 +69,6 @@
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.TabStop = false;
             this.dateTimePicker1.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
-
             // 
             // button1
             // 
@@ -106,11 +104,12 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 396);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 378);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(939, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(942, 317);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // label2
@@ -131,20 +130,10 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Verilecek Kişi";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(292, 166);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(656, 179);
-            this.dataGridView2.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 378);
+            this.label4.Location = new System.Drawing.Point(12, 360);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 14;
@@ -156,18 +145,9 @@
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(9, 55);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(277, 319);
+            this.listBox1.Size = new System.Drawing.Size(277, 304);
             this.listBox1.TabIndex = 15;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Cihaz Bilgi";
             // 
             // textBox1
             // 
@@ -227,11 +207,11 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(292, 351);
+            this.button5.Location = new System.Drawing.Point(292, 146);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(659, 23);
             this.button5.TabIndex = 22;
-            this.button5.Text = "Cihazları Düzenle";
+            this.button5.Text = "Cihaz Ekle";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -244,11 +224,32 @@
             this.comboBox1.TabIndex = 23;
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(292, 186);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(659, 23);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "Cihaz Detay";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(430, 275);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(8, 8);
+            this.button7.TabIndex = 25;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 623);
+            this.ClientSize = new System.Drawing.Size(979, 707);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -256,10 +257,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -272,7 +271,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,10 +284,8 @@
         private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
-        private DataGridView dataGridView2;
         private Label label4;
         private ListBox listBox1;
-        private Label label5;
         private Label label6;
         private Label label7;
         private Button button4;
@@ -300,5 +296,7 @@
         public TextBox textBox1;
         public TextBox textBox3;
         private ComboBox comboBox1;
+        private Button button6;
+        private Button button7;
     }
 }

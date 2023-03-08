@@ -48,3 +48,5 @@ C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug
 C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug\net6.0-windows\IT_Depo.csproj.CopyComplete
 C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug\net6.0-windows\IT_Depo.genruntimeconfig.cache
 C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug\net6.0-windows\ref\IT_Depo.dll
+C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug\net6.0-windows\IT_Depo.Form3.resources
+C:\Users\ahmet\OneDrive\Masaüstü\DepoUygulamasi-main\IT_Depo\IT_Depo\obj\Debug\net6.0-windows\IT_Depo.Form4.resources
