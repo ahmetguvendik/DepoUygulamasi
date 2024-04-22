@@ -13,7 +13,7 @@ namespace IT_Depo
 {
     public partial class Form2 : Form
     {
-        SqlConnection connection = new SqlConnection("Server=DESKTOP-Q4VJJBK;Database=ITDepoDb;Trusted_Connection=True;");
+        SqlConnection connection = new SqlConnection("Data Source=10.100.110.202; Initial Catalog=ITDepoDb ;User ID=aguvendik ;Password=Ahmet.123");
         public Form2()
         {
             InitializeComponent();
@@ -149,6 +149,33 @@ namespace IT_Depo
         {
             Form3 f3 = new Form3();
             f3.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private async void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = string.Format("UPDATE Product SET verildimi=@verildimi, WHERE id = '" + dataGridView1.CurrentRow.Cells["id"].Value.ToString() + "'  ");
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                await connection.OpenAsync();
+                //foreach (var item in listBox1.Items)
+                //{
+                //    ints.Add(int.Parse(item.ToString()));
+                //}
+                cmd.Parameters.AddWithValue("@verildimi", false);
+                cmd.ExecuteNonQuery();
+                await connection.CloseAsync();
+                getDataAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

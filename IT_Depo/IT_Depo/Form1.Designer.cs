@@ -29,251 +29,356 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            textBox2 = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            listBox1 = new ListBox();
+            textBox1 = new TextBox();
+            textBox3 = new TextBox();
+            label6 = new Label();
+            label7 = new Label();
+            button4 = new Button();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialog1 = new PrintPreviewDialog();
+            button5 = new Button();
+            comboBox1 = new ComboBox();
+            button6 = new Button();
+            button7 = new Button();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            label1 = new Label();
+            label5 = new Label();
+            textBox6 = new TextBox();
+            button8 = new Button();
+            label8 = new Label();
+            label9 = new Label();
+            button9 = new Button();
+            label10 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(464, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 23);
-            this.textBox2.TabIndex = 2;
+            textBox2.Location = new Point(992, 78);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(173, 23);
+            textBox2.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy ";
-            this.dateTimePicker1.Location = new System.Drawing.Point(292, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(166, 23);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.TabStop = false;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy ";
+            dateTimePicker1.Location = new Point(820, 78);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(166, 23);
+            dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.TabStop = false;
+            dateTimePicker1.Value = new DateTime(2023, 1, 28, 0, 0, 0, 0);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(292, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(820, 168);
+            button1.Name = "button1";
+            button1.Size = new Size(166, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Kaydet";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(464, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(992, 168);
+            button2.Name = "button2";
+            button2.Size = new Size(173, 23);
+            button2.TabIndex = 5;
+            button2.Text = "Güncelle";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(643, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Location = new Point(1171, 168);
+            button3.Name = "button3";
+            button3.Size = new Size(136, 23);
+            button3.TabIndex = 6;
+            button3.Text = "Sil";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 378);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(942, 317);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(-9, 378);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(1508, 426);
+            dataGridView1.TabIndex = 10;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellMouseDoubleClick += dataGridView1_CellMouseDoubleClick;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(292, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 15);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Veriliş Tarihi";
+            label2.AutoSize = true;
+            label2.Location = new Point(820, 56);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 15);
+            label2.TabIndex = 11;
+            label2.Text = "Veriliş Tarihi";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(464, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 15);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Verilecek Kişi";
+            label3.AutoSize = true;
+            label3.Location = new Point(992, 56);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Verilecek Kişi";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 360);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Veriler";
+            label4.AutoSize = true;
+            label4.Location = new Point(9, 360);
+            label4.Name = "label4";
+            label4.Size = new Size(39, 15);
+            label4.TabIndex = 14;
+            label4.Text = "Veriler";
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(9, 55);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(277, 304);
-            this.listBox1.TabIndex = 15;
-            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(342, 26);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(419, 334);
+            listBox1.TabIndex = 15;
+            listBox1.DoubleClick += listBox1_DoubleClick;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(643, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 23);
-            this.textBox1.TabIndex = 17;
+            textBox1.Location = new Point(1173, 78);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(136, 23);
+            textBox1.TabIndex = 17;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(785, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 23);
-            this.textBox3.TabIndex = 18;
+            textBox3.Location = new Point(1313, 78);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(166, 23);
+            textBox3.TabIndex = 18;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(643, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 15);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Cihaz Seri Numarası";
+            label6.AutoSize = true;
+            label6.Location = new Point(1171, 56);
+            label6.Name = "label6";
+            label6.Size = new Size(112, 15);
+            label6.TabIndex = 19;
+            label6.Text = "Cihaz Seri Numarası";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(785, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 15);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Not";
+            label7.AutoSize = true;
+            label7.Location = new Point(1313, 56);
+            label7.Name = "label7";
+            label7.Size = new Size(27, 15);
+            label7.TabIndex = 20;
+            label7.Text = "Not";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(785, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Yazdır";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.Location = new Point(1313, 168);
+            button4.Name = "button4";
+            button4.Size = new Size(166, 23);
+            button4.TabIndex = 21;
+            button4.Text = "Yazdır";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // printDocument1
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            printDocument1.PrintPage += printDocument1_PrintPage;
             // 
             // printPreviewDialog1
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(292, 146);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(659, 23);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Cihaz Ekle";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.Location = new Point(820, 208);
+            button5.Name = "button5";
+            button5.Size = new Size(659, 23);
+            button5.TabIndex = 22;
+            button5.Text = "Cihaz Ekle";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 23);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 168);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(277, 23);
+            comboBox1.TabIndex = 23;
+            comboBox1.SelectionChangeCommitted += comboBox1_SelectionChangeCommitted;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(292, 186);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(659, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Cihaz Detay";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.Location = new Point(820, 248);
+            button6.Name = "button6";
+            button6.Size = new Size(659, 23);
+            button6.TabIndex = 24;
+            button6.Text = "Cihaz Detay";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(430, 275);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(8, 8);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            button7.Location = new Point(958, 337);
+            button7.Name = "button7";
+            button7.Size = new Size(8, 8);
+            button7.TabIndex = 25;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(820, 127);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(166, 23);
+            textBox4.TabIndex = 26;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(992, 127);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(173, 23);
+            textBox5.TabIndex = 27;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(821, 108);
+            label1.Name = "label1";
+            label1.Size = new Size(53, 15);
+            label1.TabIndex = 28;
+            label1.Text = "Ip Adresi";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(992, 108);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 15);
+            label5.TabIndex = 29;
+            label5.Text = "Mac Adresi";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(9, 322);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(220, 23);
+            textBox6.TabIndex = 30;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(235, 322);
+            button8.Name = "button8";
+            button8.Size = new Size(101, 23);
+            button8.TabIndex = 31;
+            button8.Text = "Ara";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click_1;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(12, 135);
+            label8.Name = "label8";
+            label8.Size = new Size(72, 15);
+            label8.TabIndex = 32;
+            label8.Text = "Kategori Seç";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(10, 304);
+            label9.Name = "label9";
+            label9.Size = new Size(80, 15);
+            label9.TabIndex = 33;
+            label9.Text = "Seri Numarası";
+            // 
+            // button9
+            // 
+            button9.Location = new Point(235, 351);
+            button9.Name = "button9";
+            button9.Size = new Size(101, 23);
+            button9.TabIndex = 34;
+            button9.Text = "Verileri Getir\r\n";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(1173, 135);
+            label10.Name = "label10";
+            label10.Size = new Size(47, 15);
+            label10.TabIndex = 35;
+            label10.Text = "CihazID";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 707);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1555, 816);
+            Controls.Add(label10);
+            Controls.Add(button9);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(button8);
+            Controls.Add(textBox6);
+            Controls.Add(label5);
+            Controls.Add(label1);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(comboBox1);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(textBox3);
+            Controls.Add(textBox1);
+            Controls.Add(listBox1);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(dataGridView1);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(textBox2);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -298,5 +403,15 @@
         private ComboBox comboBox1;
         private Button button6;
         private Button button7;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private Label label1;
+        private Label label5;
+        private TextBox textBox6;
+        private Button button8;
+        private Label label8;
+        private Label label9;
+        private Button button9;
+        private Label label10;
     }
 }

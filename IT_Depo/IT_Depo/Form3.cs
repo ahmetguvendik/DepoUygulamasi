@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +15,7 @@ namespace IT_Depo
 {
     public partial class Form3 : Form
     {
-        SqlConnection connection = new SqlConnection("Server=DESKTOP-Q4VJJBK;Database=ITDepoDb;Trusted_Connection=True;");
+        SqlConnection connection = new SqlConnection("Data Source=10.100.110.202; Initial Catalog=ITDepoDb ;User ID=aguvendik ;Password=Ahmet.123");
         public Form3()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace IT_Depo
 
             try
             {
-                string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Person.person_info from Product LEFT JOIN Person on Product.id = Person.product_id  where kategori_id = '" + comboBox1.SelectedValue + "'");
+                string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Product.verildimi,Person.person_info from Product LEFT JOIN Person on Product.id = Person.product_id  where kategori_id = '" + comboBox1.SelectedValue + "'");
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
                 DataTable dt = new DataTable();
@@ -67,7 +69,7 @@ namespace IT_Depo
         {
             try
             {
-                string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Person.person_info from Product LEFT JOIN Person on Product.id = Person.product_id  where Product.seri_no = '" + textBox1.Text + "'");
+                string sql = string.Format("Select Product.id,Product.product_name,Product.seri_no,Product.info,Product.verildimi,Person.person_info from Product LEFT JOIN Person on Product.id = Person.product_id  where Product.seri_no = '" + textBox1.Text + "'");
                 connection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
                 DataTable dt = new DataTable();
@@ -100,8 +102,7 @@ namespace IT_Depo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 f4 = new Form4();
-            f4.ShowDialog();
+
         }
     }
 }
